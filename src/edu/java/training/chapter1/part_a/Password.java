@@ -1,5 +1,9 @@
 package edu.java.training.chapter1.part_a;
 
+/*
+Ввести пароль из командной строки и сравнить его со строкой-образцом.
+ */
+
 import java.util.Scanner;
 
 public class Password {

@@ -1,5 +1,10 @@
 package edu.java.training.chapter1.part_a;
 
+/*
+Ввести целые числа как аргументы командной строки, подсчитать их сум-
+мы и произведения. Вывести результат на консоль.
+ */
+
 public class Counter {
 
     public static void main(String[] args) {

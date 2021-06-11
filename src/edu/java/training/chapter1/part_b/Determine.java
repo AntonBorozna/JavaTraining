@@ -1,5 +1,11 @@
 package edu.java.training.chapter1.part_b;
 
+/*
+Ввести с консоли n целых чисел. На консоль вывести:
+3. Числа, которые делятся на 3 или на 9.
+4. Числа, которые делятся на 5 и на 7.
+ */
+
 public class Determine {
 
     public static void main(String[] args) {

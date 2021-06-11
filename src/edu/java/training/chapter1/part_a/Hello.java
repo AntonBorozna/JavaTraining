@@ -1,5 +1,10 @@
 package edu.java.training.chapter1.part_a;
 
+/*
+Приветствовать любого пользователя при вводе его имени через команд-
+ную строку.
+ */
+
 import java.util.Scanner;
 
 public class Hello {

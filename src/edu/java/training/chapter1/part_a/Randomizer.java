@@ -1,5 +1,10 @@
 package edu.java.training.chapter1.part_a;
 
+/*
+Вывести заданное количество случайных чисел с переходом и без перехода
+на новую строку.
+ */
+
 import java.util.*;
 
 public class Randomizer {

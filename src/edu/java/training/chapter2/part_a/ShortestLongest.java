@@ -1,5 +1,11 @@
 package edu.java.training.chapter2.part_a;
 
+/*
+Ввести n чисел с консоли.
+Найти самое короткое и самое длинное число. Вывести найденные числа
+и их длину.
+ */
+
 public class ShortestLongest {
 
     public static void main(String[] args) {

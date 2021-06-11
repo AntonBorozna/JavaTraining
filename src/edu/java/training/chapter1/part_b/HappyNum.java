@@ -1,4 +1,8 @@
 package edu.java.training.chapter1.part_b;
+/*
+Ввести с консоли n целых чисел. На консоль вывести:
+9. «Счастливые» числа.
+ */
 
 public class HappyNum {
 

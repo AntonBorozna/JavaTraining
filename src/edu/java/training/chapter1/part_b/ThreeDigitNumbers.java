@@ -1,5 +1,11 @@
 package edu.java.training.chapter1.part_b;
 
+/*
+Ввести с консоли n целых чисел. На консоль вывести:
+5. Все трехзначные числа, в десятичной записи которых нет одинаковых
+цифр.
+ */
+
 public class ThreeDigitNumbers {
 
 
