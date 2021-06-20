@@ -14,14 +14,16 @@ public class FlightPark {
     List<Plane> planes = new ArrayList<>();
 
     void fillPlanes() {
-        planes.add(new PassengerAircraft("Airbus A321neo", "AI200-001", 7400, 2740, 210, AircraftType.PASSENGER));
-        planes.add(new PassengerAircraft("Airbus A321neo", "AI200-002", 7400, 2740, 210, AircraftType.PASSENGER));
-        planes.add(new PassengerAircraft("Airbus A321neo", "AI200-003", 7400, 2740, 210, AircraftType.PASSENGER));
-        planes.add(new PassengerAircraft("Boeing 777-300ER", "BO300-01", 13649, 7800, 450, AircraftType.PASSENGER));
-        planes.add(new CargoAircraft("Boeing 777 Freighter", "BO777-001", 9047, 9000, 103, AircraftType.CARGO));
-        planes.add(new CargoAircraft("Boeing 757-200F", "BO757F-001", 5834, 3300, 39, AircraftType.CARGO));
-        planes.add(new CargoAircraft("Airbus A330-200F", "AI300F-001", 7400, 5600, 70, AircraftType.CARGO));
-        planes.add(new CargoAircraft("Airbus A330-200F", "AI300F-002", 7400, 5600, 70, AircraftType.CARGO));
+        planes.add(new PassengerAircraft("Airbus A321neo", "AI200-001", 7400, 2740, 210));
+        planes.add(new PassengerAircraft("Airbus A321neo", "AI200-002", 7400, 2740, 210));
+        planes.add(new PassengerAircraft("Airbus A321neo", "AI200-003", 7400, 2740, 210));
+        planes.add(new PassengerAircraft("Boeing 777-300ER", "BO300-01", 13649, 7800, 450));
+        planes.add(new CargoAircraft("Boeing 777 Freighter", "BO777-001", 9047, 9000, 103));
+        planes.add(new CargoAircraft("Boeing 757-200F", "BO757F-001", 5834, 3300, 39));
+        planes.add(new CargoAircraft("Airbus A330-200F", "AI300F-001", 7400, 5600, 70));
+        planes.add(new CargoAircraft("Airbus A330-200F", "AI300F-002", 7400, 5600, 70));
+        planes.add(new CargoAircraft("Airbus A330-200FA", "AI300F-002", 7400, 5600, 70));
+        
     }
 
     void sortByRange() {

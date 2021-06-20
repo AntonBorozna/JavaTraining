@@ -16,6 +16,7 @@ public abstract class Plane implements Comparable<Plane> {
         this.range = range;
         this.fuelConsumption = fuelConsumption;
         this.type = type;
+        
     }
 
     public int getFuelConsumption() {
