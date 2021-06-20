@@ -12,17 +12,17 @@ public class Runner {
         Department.Position position = department.new Position();
         Department.Employee employee = department.new Employee();
         department.fillEmployee();
-//        department.printDepartmentList();
-//        position.addPosition("Developer");
-//        position.addPosition("HR");
-  //      department.returnSpecificEmployee("Developer");
-//        department.returnSpecificEmployee("Tester");
+        department.printDepartmentList();
+        position.addPosition("Developer");
+        position.addPosition("HR");
+        department.returnSpecificEmployee("Developer");
+        department.returnSpecificEmployee("Tester");
         position.returnPositionsList();
-//        department.printDepartmentList();
-//        employee.terminateEmployee("Michael", "22/11/2021");
-   //     System.out.println();
- //       System.out.println("final list:");
-  //      department.printDepartmentList();
+        department.printDepartmentList();
+        employee.terminateEmployee("Michael", "22/11/2021");
+        System.out.println();
+        System.out.println("final list:");
+        department.printDepartmentList();
         
     }
 }
