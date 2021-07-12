@@ -9,6 +9,7 @@ public class Deposit {
 	private String type;
 	private double percent;
 	private double quantity;
+	private String status;
 	
 	Deposit(){};
 		
@@ -85,12 +86,19 @@ public class Deposit {
 	public void setLength(int length) {
 		this.length = length;
 	}
+	
+	public String getStatus() {
+		return status;
+	}
 
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	
 	@Override
 	public String toString() {
 		return "Deposit [id=" + id + ", length=" + length + ", lengthType=" + lengthType + ", currency=" + currency
-				+ ", type=" + type + ", percent=" + percent + ", quantity=" + quantity + "]";
-	}	
+				+ ", type=" + type + ", percent=" + percent + ", quantity=" + quantity + ", status=" + status + "]";
+	}		
 		
 }

@@ -12,15 +12,20 @@ public class Runner {
 	public static void main(String[] args) {
 		DepositRepo depositRepo = new DepositRepo();
 		depositRepo.fillDeposits();
-		DepositManager manager = new DepositManager();			
-		manager.openDeposit(depositRepo.getDeposits(), "Perpetual", "USD", "Revocable", 3, 9000);
-		manager.openDeposit(depositRepo.getDeposits(),"erpetual", "USD", "Revocable", 3, 9000);
-		manager.openDeposit(depositRepo.getDeposits(),"Short-term", 90 , "USD", "Revocable", 3, 9000);		
-		manager.openDeposit(depositRepo.getDeposits(),"Long-term", 3 , "USD", "Revocable", 3, 9000);
-		manager.calculateProfit(depositRepo.getDeposits(),1);
-		manager.calculateProfit(depositRepo.getDeposits(),2);
-		manager.calculateProfit(depositRepo.getDeposits(),3);
-		manager.getType(depositRepo.getDeposits(),1);
-		}	
+		DepositCalculator calculator = new DepositCalculator();
+		depositRepo.printAllDeposits(depositRepo.getDeposits());
+		depositRepo.openDeposit( "Perpetual", "USD", "Revocable", 3, 9000);
+		depositRepo.addDepositToRepo(depositRepo.openDeposit("Perpetual", "USD", "Revocable", 3, 9000));
+		depositRepo.openDeposit("erpetual", "USD", "Revocable", 3, 9000);
+		depositRepo.openDeposit("Short-term", 90 , "USD", "Revocable", 3, 9000);		
+		depositRepo.openDeposit("Long-term", 3 , "USD", "Revocable", 3, 9000);
+		calculator.calculateProfit(depositRepo.getDeposits(),1);
+		calculator.calculateProfit(depositRepo.getDeposits(),2);
+		calculator.calculateProfit(depositRepo.getDeposits(),3);		
+		depositRepo.printAllDeposits(depositRepo.getDeposits());
+		
+		}
+
+	
 
 }
