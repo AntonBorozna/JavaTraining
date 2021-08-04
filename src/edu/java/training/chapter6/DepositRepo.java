@@ -2,9 +2,10 @@ package edu.java.training.chapter6;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class DepositRepo implements Openable {
-
+	Deposit deposit = new Deposit();
 	List<Deposit> deposits = new ArrayList<>();
 
 	public void fillDeposits() {
@@ -16,25 +17,47 @@ public class DepositRepo implements Openable {
 		autoFillDepositId(deposits);
 	}
 
-	public Deposit openDeposit(String lengthType, int length, String currency, String type, double percent,
-			double quantity) {
-		Deposit deposit = null;
-		if (lengthType.equals("Short-term") || lengthType.equals("Long-term")) {
-			deposit = new Deposit(lengthType, length, currency, type, percent, quantity);
-			System.out.println("Deposit can be opened.");
-		} else {
-			System.out.println("Length Type should be Short-term or Long-term.");
-		}
-		return deposit;
-	}
-
-	public Deposit openDeposit(String lengthType, String currency, String type, double percent, double quantity) {
-		Deposit deposit = null;
-		if (lengthType.equals("Perpetual")) {
-			deposit = new Deposit(lengthType, currency, type, percent, quantity);
-			System.out.println("Deposit can be opened.");
-		} else {
-			System.out.println("Length Type should be Perpetual.");
+	public Deposit openDeposit() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("To open new deposit, please choose what type. \r\n" + "Short-term, Long-term or Perpetual");
+		String enteredLegthType = scanner.next();
+		switch (enteredLegthType) {
+		case "Short-term":
+		case "Long-term":
+			System.out.println("Please put the following params: \nCurrency");
+			String enteredCurrency = scanner.next();
+			System.out.println("Choose type: Revocable or Irrevocable");
+			String enteredType = scanner.next();
+			while (true) {
+				if (enteredType.equals("Revocable") || enteredType.equals("Irrevocable")) {
+					break;
+				}
+				System.out.println("Type should be Revocable or Irrevocable.");
+				enteredType = scanner.next();
+			}
+			System.out.println("Enter Quantity");
+			double enteredQuantity = scanner.nextDouble();
+			System.out.println("Enter Percent");
+			double enteredPercent = scanner.nextDouble();
+			System.out.println("Enter lenght in years for long-term in days for short-term");
+			int enteredLength = scanner.nextInt();
+			deposit = new Deposit(enteredLegthType, enteredLength, enteredCurrency, enteredType, enteredPercent,
+					enteredQuantity);
+			System.out.println(deposit.toString());
+			break;
+		case "Perpetual":
+			System.out.println("Please put the following params:" + "\nCurrency");
+			enteredCurrency = scanner.next();
+			System.out.println("Enter Quantity");
+			enteredQuantity = scanner.nextDouble();
+			System.out.println("Enter Percent");
+			enteredPercent = scanner.nextDouble();
+			deposit = new Deposit(enteredLegthType, enteredCurrency, "Revocable", enteredPercent, enteredQuantity);
+			System.out.println(deposit.toString());
+			break;
+		default:
+			System.out.println("Please enter consistent Type");
+			openDeposit();
 		}
 		return deposit;
 	}
@@ -60,13 +83,7 @@ public class DepositRepo implements Openable {
 		return deposits;
 	}
 
-	/*
-	 * Уточнить почему removeDeposit с типом boolean
-	 */
-
-//	public boolean removeDeposit(List<Deposit> deposits, int id) {
-//		boolean isDepositClose = false;		
-//		return isDepositClose;
-//	}
-
+	public boolean isDepositExist(List<Deposit> deposits, int id) {		
+		return deposits.stream().anyMatch(o -> o.getId() == id);
+	}
 }

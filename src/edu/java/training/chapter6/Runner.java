@@ -8,24 +8,11 @@ package edu.java.training.chapter6;
  */
 
 public class Runner {
-	
+
 	public static void main(String[] args) {
 		DepositRepo depositRepo = new DepositRepo();
-		depositRepo.fillDeposits();
-		DepositCalculator calculator = new DepositCalculator();
-		depositRepo.printAllDeposits(depositRepo.getDeposits());
-		depositRepo.openDeposit( "Perpetual", "USD", "Revocable", 3, 9000);
-		depositRepo.addDepositToRepo(depositRepo.openDeposit("Perpetual", "USD", "Revocable", 3, 9000));
-		depositRepo.openDeposit("erpetual", "USD", "Revocable", 3, 9000);
-		depositRepo.openDeposit("Short-term", 90 , "USD", "Revocable", 3, 9000);		
-		depositRepo.openDeposit("Long-term", 3 , "USD", "Revocable", 3, 9000);
-		calculator.calculateProfit(depositRepo.getDeposits(),1);
-		calculator.calculateProfit(depositRepo.getDeposits(),2);
-		calculator.calculateProfit(depositRepo.getDeposits(),3);		
-		depositRepo.printAllDeposits(depositRepo.getDeposits());
-		
-		}
-
-	
-
+		Console console = new Console();
+		console.runByUserChoice(depositRepo.openDeposit());		
+	    depositRepo.printAllDeposits(depositRepo.getDeposits());		
+	}
 }

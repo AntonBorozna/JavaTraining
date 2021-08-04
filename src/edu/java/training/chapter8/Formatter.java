@@ -16,8 +16,11 @@ public class Formatter {
 
 	public List<String> replaceChar(String text, char symbal, int k) {
 		return Arrays.stream(text.split("\\s+")).map(s -> {
-			if (s.length() >= k)
-				s = s.replaceFirst("" + s.charAt(k - 1), "" + symbal);
+			if (s.length() >= k) {
+				StringBuilder o = new StringBuilder(s);
+				o.setCharAt(k-1, symbal);
+				s = o.toString();
+			}				
 			return s;
 		}).collect(Collectors.toList());
 	}
