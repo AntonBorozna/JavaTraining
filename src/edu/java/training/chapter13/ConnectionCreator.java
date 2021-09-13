@@ -1,4 +1,4 @@
-package edu.java.tarining.chapter13;
+package edu.java.training.chapter13;
 
 import java.io.FileReader;
 import java.io.IOException;

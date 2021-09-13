@@ -1,4 +1,4 @@
-package edu.java.tarining.chapter13;
+package edu.java.training.chapter13;
 
 /*
  * В каждом из заданий необходимо выполнить следующие действия:
