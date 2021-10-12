@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.example.com/devices"
+ xsi:schemaLocation="http://www.example.com/devices devices.xsd">
+ <device name="MSI GeForce RTX3080" origin="Taiwan">
+ <price>1973</price>
+ <critical>true</critical>
+ <type>
+ <group>video adapter</group>
+ <powerConsumption>360</powerConsumption>
+ <cooler>true</cooler> 
+ </type>
+ </device>
+ <device name="TP-Link UE300" origin="China">
+ <price>16</price>
+ <critical>false</critical>
+ <type>
+ <group>network adapter</group>
+ <powerConsumption>1</powerConsumption>
+ <cooler>false</cooler> 
+ </type>
+ </device>
+ <device name="intel Core i5-10400F" origin="USA">
+ <price>180</price>
+ <critical>true</critical>
+ <type>
+ <group>CPU</group>
+ <powerConsumption>136</powerConsumption>
+ <cooler>false</cooler> 
+ </type>
+ </device>
+</devices>
